@@ -1,0 +1,19 @@
+
+
+.nav{
+    grid-area: n;
+    background-color: antiquewhite;
+    padding: 20px;
+}
+
+.item {
+    color: green;
+    text-decoration: none;
+}
+
+
+
+.active {
+    color: mediumpurple;
+    text-decoration: none;
+}
