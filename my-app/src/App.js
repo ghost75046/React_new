@@ -13,6 +13,9 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 // import Footer from "./footer";
 
 const App = (props) => {
+
+
+
   return (
       <BrowserRouter>
         <div className = 'app-wrapper'>
@@ -21,8 +24,9 @@ const App = (props) => {
             {/*<Profile />*/}
             <div className='app-wrapper-content'>
                 <Routes>
-                    <Route path='/profile' element={<Profile/>} />
-                    <Route path='/dialogs/*' element={<Dialogs/>} />
+                    <Route path='/profile' element={<Profile posts={props.posts}/>} />
+                    <Route path="/dialogs" element={<Dialogs dialogsData={props.dialogsData} messages={props.messages}/>} />
+                    {/*<Route path='/dialogs/*' element={ () => <Dialogs/>} />*/}
                 </Routes>
             </div>
         </div>
