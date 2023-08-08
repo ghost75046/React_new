@@ -8,6 +8,7 @@ import Profile from "./components/Profile/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
 import classes from "./components/Profile/Profile.module.css";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {updateNewPostText} from "./redux/state";
 
 // import Technologies from "./technologies"
 // import Footer from "./footer";
@@ -24,7 +25,7 @@ const App = (props) => {
             {/*<Profile />*/}
             <div className='app-wrapper-content'>
                 <Routes>
-                    <Route path='/profile' element={<Profile state={props.state.profilePage} addPost={props.addPost}/>} />
+                    <Route path='/profile' element={<Profile profilePage={props.state.profilePage} addPost={props.addPost} updateNewPostText={props.updateNewPostText}/>} />
                     <Route path="/dialogs" element={<Dialogs state={props.state.dialogsPage}/>} />
                     {/*<Route path='/dialogs/*' element={ () => <Dialogs/>} />*/}
                 </Routes>
